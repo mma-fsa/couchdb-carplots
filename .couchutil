@@ -1,0 +1,3 @@
+#carplots database configuration
+database=carplots_staging
+
