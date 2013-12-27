@@ -1,9 +1,42 @@
 {
-	"_rev": "9-46e534abc57ea36ee7113a0e3aac055d", 
-	"_id": "_design/carplots", 
-	"views": {
-		"all": {
-			"map": "#"
-		}		
-	}
+  "_id":"_design/carplots",
+  "_rev":"22-279cc59a24fd0f2cb49fcd0fa756ee21",
+  "lists":{
+    "key_value":"#"
+  },
+  "rewrites":[
+    {
+      "from":"/plots/:mmid/:yr",
+      "query":{
+        "endkey":[
+          ":mmid",
+          ":yr",
+          {}
+        ],
+        "startkey":[
+          ":mmid",
+          ":yr"
+        ]
+      },
+      "to":"/_list/key_value/plots"
+    },
+    {
+      "from":"/plots/:mmid/:yr/:st/:end/:eng",
+      "query":{
+        "key":[
+          ":mmid",
+          ":yr",
+          ":st",
+          ":end",
+          ":eng"
+        ]
+      },
+      "to":"/_list/key_value/plots"
+    }
+  ],
+  "views":{
+    "plots":{
+      "map":"#"
+    }
+  }
 }
