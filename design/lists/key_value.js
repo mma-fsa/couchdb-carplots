@@ -4,11 +4,11 @@ function(head, req) {
     var row = null
     while(row = getRow()){
       var rowKey = {
-          makeModelId: row.key[0],
-          carYear: row.key[1],
-          startYear: row.key[2],
-          endYear: row.key[3],
-          carEngine: row.key[4]
+          MakeModelID: row.key[0],
+          CarYear: row.key[1],
+          StartYear: row.key[2],
+          EndYear: row.key[3],
+          CarEngineID: row.key[4]
       }
       list.push({
         "key": rowKey,
