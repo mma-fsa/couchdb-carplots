@@ -6,9 +6,7 @@ function(head, req) {
       var rowKey = {
           MakeModelID: row.key[0],
           CarYear: row.key[1],
-          StartYear: row.key[2],
-          EndYear: row.key[3],
-          CarEngineID: row.key[4]
+          CarEngineID: row.key[2]
       }
       list.push({
         "key": rowKey,

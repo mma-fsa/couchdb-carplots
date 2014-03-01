@@ -1,6 +1,6 @@
 {
   "_id":"_design/carplots",
-  "_rev":"24-87685708fcb21365def8bd758ed589e4",
+  "_rev":"16-58573203b24ace840075bc6294085a1c",
   "lists":{
     "key_value":"#"
   },
@@ -21,13 +21,11 @@
       "to":"/_list/key_value/plots"
     },
     {
-      "from":"/plots/:mmid/:yr/:st/:end/:eng",
+      "from":"/plots/:mmid/:yr/:eng",
       "query":{
         "key":[
           ":mmid",
           ":yr",
-          ":st",
-          ":end",
           ":eng"
         ]
       },
